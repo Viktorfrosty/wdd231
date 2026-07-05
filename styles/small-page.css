@@ -11,7 +11,7 @@ body {
   color: #333;
 }
 
-h1 {
+h1, h2 {
   font-family: 'Playfair Display', serif;
   font-size: 1.5rem;
 }
@@ -43,11 +43,10 @@ header img {
 }
 
 header h1 {
-  color: #fff;
+  color: gray;
   font-size: 1.4rem;
 }
 
-/* Botón Hamburguesa en Móvil */
 #menu-button {
   font-size: 1.6rem;
   border: 0;
@@ -69,10 +68,8 @@ header h1 {
 
 #menu-button span {
   display: none;
-  /* Esconde el texto en móvil */
 }
 
-/* Menú al 100% de ancho */
 #nav-menu {
   width: 100%;
 }
@@ -82,7 +79,6 @@ header h1 {
   flex-direction: column;
   list-style: none;
   background-color: #00152e;
-  /* Un tono más oscuro del azul para el menú */
   margin-top: 1rem;
   width: 100%;
 }
@@ -107,7 +103,6 @@ header h1 {
   font-weight: 700;
 }
 
-/* --- CONTENIDO PRINCIPAL --- */
 main {
   padding: 1rem;
   max-width: 1200px;
@@ -122,18 +117,16 @@ main {
 }
 
 main section {
-  background-color: #e0e0e0;
-  /* Tu gris claro original */
+  background-color: whitesmoke;
   margin-bottom: 1.5rem;
   border: 1px solid #ccc;
   border-radius: 5px;
   overflow: hidden;
 }
 
-main section h2 {
+main section h3 {
   font-size: 1.2rem;
   background-color: #002147;
-  /* Banners en azul original */
   color: #fff;
   margin: 0;
   padding: 0.75rem;
@@ -152,7 +145,6 @@ main section .profile-img {
   margin: 0 auto;
 }
 
-/* --- FILTROS Y CURSOS --- */
 .button-group {
   display: flex;
   justify-content: center;
@@ -180,7 +172,6 @@ main section .profile-img {
 
 .course-card {
   background-color: #b5b5b5;
-  /* Gris intermedio original */
   padding: 0.75rem;
   text-align: center;
   border: 1px solid #888;
@@ -188,7 +179,6 @@ main section .profile-img {
   font-weight: bold;
 }
 
-/* Tu verde original para materias completadas */
 .course-card.completed {
   background-color: #9cdbb5;
   color: #113311;
@@ -201,7 +191,6 @@ main section .profile-img {
   padding-bottom: 1rem;
 }
 
-/* --- FOOTER --- */
 footer {
   background-color: #002147;
   /* Footer azul */
@@ -223,7 +212,6 @@ footer ul img {
   width: 32px;
   height: 32px;
   filter: invert(1);
-  /* Iconos blancos */
   transition: transform 0.2s;
 }
 

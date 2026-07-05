@@ -1,11 +1,9 @@
 @media (min-width: 37.5em) {
 
-  /* Forzamos que los elementos del header se apilen verticalmente en escritorio */
   header {
     flex-direction: column;
     align-items: stretch;
     padding: 1rem 0 0 0;
-    /* Sin paddings laterales para que la barra limpie el borde */
     background-color: #ffffff;
   }
 
@@ -17,15 +15,12 @@
   header h1 {
     font-size: 2rem;
     color: #002147;
-    /* Nombre del sitio en azul sobre fondo blanco */
   }
 
-  /* Ocultamos por completo el botón hamburguesa */
   #menu-button {
     display: none !important;
   }
 
-  /* La barra de navegación ocupa el 100% de la parte inferior del header */
   #nav-menu {
     width: 100%;
     background-color: #002147;
@@ -51,7 +46,6 @@
     color: #fff;
   }
 
-  /* --- GRID ESTRUCTURAL --- */
   main {
     display: grid;
     grid-template-columns: 2fr 1fr;
