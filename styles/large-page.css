@@ -1,0 +1,82 @@
+@media (min-width: 37.5em) {
+
+  /* Forzamos que los elementos del header se apilen verticalmente en escritorio */
+  header {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem 0 0 0;
+    /* Sin paddings laterales para que la barra limpie el borde */
+    background-color: #ffffff;
+  }
+
+  header div:first-child {
+    width: auto;
+    padding: 0 2rem 1rem 2rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+    color: #002147;
+    /* Nombre del sitio en azul sobre fondo blanco */
+  }
+
+  /* Ocultamos por completo el botón hamburguesa */
+  #menu-button {
+    display: none !important;
+  }
+
+  /* La barra de navegación ocupa el 100% de la parte inferior del header */
+  #nav-menu {
+    width: 100%;
+    background-color: #002147;
+    /* Barra azul horizontal */
+  }
+
+  #nav-menu ul {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    background-color: transparent;
+    margin-top: 0;
+  }
+
+  #nav-menu a {
+    border-top: none;
+    padding: 1rem 2rem;
+    color: #fff;
+  }
+
+  #nav-menu a:hover {
+    background-color: #00152e;
+    color: #fff;
+  }
+
+  /* --- GRID ESTRUCTURAL --- */
+  main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    margin-top: 1.5rem;
+  }
+
+  #page-title {
+    grid-column: 1 / -1;
+    text-align: left;
+    font-size: 2.2rem;
+  }
+
+  #courses-section {
+    grid-column: 1 / -1;
+  }
+
+  #course-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 15px;
+  }
+
+  .course-card {
+    flex: 1 1 calc(33.333% - 10px);
+  }
+}
