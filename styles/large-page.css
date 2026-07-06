@@ -1,80 +1,216 @@
-@media (min-width: 37.5em) {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  header {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 1rem 0 0 0;
-    background-color: #ffffff;
-  }
+body {
+  font-family: 'Google Sans', Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+}
 
-  body header div a img {
-    filter: none;
-  }
+h1,
+h2,
+h3,
+#site-name {
+  font-family: 'Playfair Display', serif;
+}
 
-  header div:first-child {
-    width: auto;
-    padding: 0 2rem 1rem 2rem;
-  }
+header {
+  background-color: #ffffff;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 1rem 0 0 0;
+}
 
-  #site-name {
-    font-size: 2rem;
-    color: black;
-  }
+header div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0 2rem 1rem 2rem;
+}
 
-  #menu-button {
-    display: none !important;
-  }
+#site-name {
+  font-size: 2rem;
+  color: black;
+}
 
-  #nav-menu {
-    width: 100%;
-    background-color: #002147;
-    /* Barra azul horizontal */
-  }
+body header div a img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
 
-  #nav-menu ul {
-    display: flex !important;
-    flex-direction: row;
-    justify-content: center;
-    background-color: transparent;
-    margin-top: 0;
-  }
+#menu-button {
+  display: none;
+}
 
-  #nav-menu a {
-    border-top: none;
-    padding: 1rem 2rem;
-    color: #fff;
-  }
+#nav-menu {
+  width: 100%;
+  background-color: #002147;
+}
 
-  #nav-menu a:hover {
-    background-color: #00152e;
-    color: #fff;
-  }
+#nav-menu ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  list-style: none;
+  padding-left: 2rem;
+}
 
-  main {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 20px;
-    margin-top: 1.5rem;
-  }
+#nav-menu a {
+  display: block;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
 
-  #page-title {
-    grid-column: 1 / -1;
-    text-align: left;
-    font-size: 2.2rem;
-  }
+#nav-menu a:hover {
+  background-color: #00152e;
+  color: #fff;
+}
 
-  #courses-section {
-    grid-column: 1 / -1;
-  }
+#nav-menu a.active::before {
+  content: "\272A ";
+  margin-right: 8px;
+}
 
-  #course-cards {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 15px;
-  }
+#nav-menu a.active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
 
-  .course-card {
-    flex: 1 1 calc(33.333% - 10px);
-  }
+main {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 1.5rem auto 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+#page-title {
+  grid-column: 1 / -1;
+  text-align: left;
+  font-size: 2.2rem;
+  margin: 0.5rem 0 1rem 0;
+  padding-bottom: 0.3rem;
+}
+
+main section {
+  background-color: whitesmoke;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+main section h2 {
+  font-size: 1.2rem;
+  background-color: #002147;
+  color: #fff;
+  margin: 0;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+main section p,
+main section .profile-img {
+  padding: 1rem;
+}
+
+.profile-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+#courses-section {
+  grid-column: 1 / -1;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 1rem;
+}
+
+.button-group button {
+  flex: 1;
+  max-width: 120px;
+  padding: 0.5rem;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#course-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 15px;
+  padding: 1rem;
+}
+
+.course-card {
+  flex: 1 1 calc(33.333% - 10px);
+  background-color: #b5b5b5;
+  padding: 0.75rem;
+  text-align: center;
+  border: 1px solid #888;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.course-card.completed {
+  background-color: #9cdbb5;
+  color: #113311;
+  border-color: #5ca37a;
+}
+
+#total-credits {
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 1rem;
+}
+
+/* --- FOOTER --- */
+footer {
+  background-color: #002147;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 2rem;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 25px;
+  padding-bottom: 1rem;
+}
+
+footer ul img {
+  width: 32px;
+  height: 32px;
+  filter: invert(1);
+  transition: transform 0.2s;
+}
+
+footer ul img:hover {
+  transform: scale(1.1);
+}
+
+footer p {
+  font-size: 0.9rem;
+  margin: 0.4rem 0;
 }
