@@ -7,14 +7,18 @@
     background-color: #ffffff;
   }
 
+  body header div a img {
+    filter: none;
+  }
+
   header div:first-child {
     width: auto;
     padding: 0 2rem 1rem 2rem;
   }
 
-  header h1 {
+  #site-name {
     font-size: 2rem;
-    color: #002147;
+    color: black;
   }
 
   #menu-button {

@@ -96,7 +96,7 @@ function displayCourses(filter = 'all') {
         card.classList.add('course-card');
         if (course.completed) card.classList.add('completed');
         
-        card.innerHTML = `<h4>${course.subject} ${course.number}</h4>`;
+        card.innerHTML = `<h3>${course.subject} ${course.number}</h3>`;
         container.appendChild(card);
     });
 
