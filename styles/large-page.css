@@ -35,7 +35,8 @@ header div:first-child {
 
 #site-name {
   font-size: 2rem;
-  color: black;
+  background-color: #002147;
+  color: #ffffff !important;
 }
 
 body header div a img {
@@ -80,7 +81,8 @@ body header div a img {
 }
 
 #nav-menu a.active {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #004080 !important;
+  color: #ffffff !important;
 }
 
 main {
@@ -182,7 +184,6 @@ main section .profile-img {
   padding-bottom: 1rem;
 }
 
-/* --- FOOTER --- */
 footer {
   background-color: #002147;
   color: #fff;
@@ -213,4 +214,11 @@ footer ul img:hover {
 footer p {
   font-size: 0.9rem;
   margin: 0.4rem 0;
+}
+
+@media (min-width: 37.5em) {
+  #site-name {
+    background-color: #ffffff;
+    color: #000000 !important;
+  }
 }
