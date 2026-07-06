@@ -18,7 +18,7 @@
 
   #site-name {
     font-size: 2rem;
-    color: black;
+    color: #002147;
   }
 
   #menu-button {
@@ -28,7 +28,6 @@
   #nav-menu {
     width: 100%;
     background-color: #002147;
-    /* Barra azul horizontal */
   }
 
   #nav-menu ul {
