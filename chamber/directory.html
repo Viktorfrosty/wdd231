@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twilight's Chamber of Commerce - Directory</title>
+    <meta name="description"
+      content="Discover and connect with local businesses in the Twilight's Chamber of Commerce Directory.">
+    <meta name="author" content="Victor Manuel Malpica Castro">
+    <!-- Open Graph Meta Tags for Facebook/Social Media -->
+    <meta property="og:title" content="Twilight's Chamber of Commerce Directory">
+    <meta property="og:description" content="Connecting businesses and community in Barquisimeto.">
+    <meta property="og:image" content="https://gbvm.knoios.com/mmedia/19614/barquisimeto-11688.jpg">
+    <meta property="og:url" content="https://viktorfrosty.github.io/wdd231/chamber/directory.html">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="images/logo.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css" media="all">
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 320px)">
+    <script src="scripts/directory.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo-box">
+        <img src="images/logo.webp" alt="Chamber Logo" width="50" height="50">
+        <h1>Twilight's Chamber of Commerce</h1>
+      </div>
+      <button id="menu-btn">☰</button>
+      <nav>
+        <ul id="primary-nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="directory.html" class="active">Directory</a></li>
+          <li><a href="#">Join</a></li>
+          <li><a href="#">Discover</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Business Directory</h2>
+
+      <!-- Toggle Buttons -->
+      <div class="view-toggles">
+        <button id="grid-btn">⏹ Grid</button>
+        <button id="list-btn">📄 List</button>
+      </div>
+
+      <!-- Directory Container -->
+      <article id="directory-container" class="grid-view">
+        <!-- JavaScript will inject the business cards here -->
+      </article>
+    </main>
+
+    <footer>
+      <div class="footer-info">
+        <p><strong>Twilight's Chamber of Commerce</strong></p>
+        <p>Av. Los Leones, Barquisimeto, Lara, Venezuela</p>
+        <p>info@barquisimetocc.org</p>
+        <p>(+58) 000-0000000</p>
+      </div>
+      <div class="footer-dev">
+        <p>WDD231 Class Project</p>
+        <p>Victor Manuel Malpica Castro</p>
+        <p>&copy; <span id="currentyear"></span> Twilight's Chamber of Commerce</p>
+        <p id="lastModified"></p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+/* ----- BASE & TYPOGRAPHY ----- */
+body {
+  font-family: 'Google Sans', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+h1,
+h2,
+h3{
+  font-family: 'Playfair Display', serif;
+}
+
+/* ----- HEADER (Mobile) ----- */
+header {
+  background-color: #e8e8e8;
+  padding: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* Hamburger Button */
+#menu-btn {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Navigation */
+nav {
+  width: 100%;
+}
+
+#primary-nav {
+  display: none;
+  /* Hidden on mobile by default */
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0 0;
+}
+
+/* Class added by JS to open menu */
+#primary-nav.open {
+  display: flex;
+}
+
+#primary-nav li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+
+#primary-nav li a:hover,
+#primary-nav li a.active {
+  font-weight: bold;
+  background-color: #dcdcdc;
+}
+
+/* ----- MAIN CONTENT & DIRECTORY ----- */
+main {
+  padding: 1rem;
+  max-width: 1200px;
+  min-height: 500px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.view-toggles {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.view-toggles button {
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 1px solid #333;
+  background: #e8e8e8;
+}
+
+#directory-container {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  min-height: 800px;
+}
+
+#directory-container section {
+  background-color: #e8e8e8;
+  border: 1px solid #999;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+#directory-container section img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  aspect-ratio: 1 / 1;
+}
+
+#directory-container section p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+/* ----- FOOTER (Mobile) ----- */
+footer {
+  background-color: #e8e8e8;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+/* Hide images in List View */
+#directory-container.list-view section img {
+  display: none;
+}
