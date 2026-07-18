@@ -10,7 +10,7 @@
     <!-- Open Graph Meta Tags for Facebook/Social Media -->
     <meta property="og:title" content="Twilight's Chamber of Commerce Directory">
     <meta property="og:description" content="Connecting businesses and community in Barquisimeto.">
-    <meta property="og:image" content="https://gbvm.knoios.com/mmedia/19614/barquisimeto-11688.jpg">
+    <meta property="og:image" content="https://viktorfrosty.github.io/wdd231/chamber/images/barquisimeto-11688.jpg">
     <meta property="og:url" content="https://viktorfrosty.github.io/wdd231/chamber/directory.html">
     <meta property="og:type" content="website">
     <link rel="icon" href="images/logo.ico" type="image/x-icon">
@@ -29,7 +29,7 @@
     <header>
       <div class="logo-box">
         <img src="images/logo.webp" alt="Chamber Logo" width="50" height="50">
-        <h1>Twilight's Chamber of Commerce</h1>
+        <span id="site-name">Twilight's Chamber of Commerce</span>
       </div>
       <button id="menu-btn">☰</button>
       <nav>
@@ -43,7 +43,7 @@
     </header>
 
     <main>
-      <h2>Business Directory</h2>
+      <h1>Business Directory</h1>
 
       <!-- Toggle Buttons -->
       <div class="view-toggles">
@@ -58,18 +58,31 @@
     </main>
 
     <footer>
-      <div class="footer-info">
-        <p><strong>Twilight's Chamber of Commerce</strong></p>
-        <p>Av. Los Leones, Barquisimeto, Lara, Venezuela</p>
-        <p>info@barquisimetocc.org</p>
-        <p>(+58) 000-0000000</p>
-      </div>
-      <div class="footer-dev">
-        <p>WDD231 Class Project</p>
-        <p>Victor Manuel Malpica Castro</p>
-        <p>&copy; <span id="currentyear"></span> Twilight's Chamber of Commerce</p>
-        <p id="lastModified"></p>
-      </div>
+      <footer>
+        <!-- 1. Contact Information -->
+        <div class="footer-info">
+          <p><strong>Twilight's Chamber of Commerce</strong></p>
+          <p>Av. Los Leones, Barquisimeto, Lara, Venezuela</p>
+          <p>info@barquisimetocc.org</p>
+          <p>(+58) 000-0000000</p>
+        </div>
+        <div class="social-links">
+          <a href="https://facebook.com" aria-label="Facebook"><img src="images/facebook.svg" alt="Facebook" width="32"
+              height="32"></a>
+          <a href="https://instagram.com" aria-label="Twitter"><img src="images/instagram.svg" alt="Twitter" width="32"
+              height="32"></a>
+          <a href="https://linkedin.com" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="LinkedIn" width="32"
+              height="32"></a>
+        </div>
+      
+        <!-- 3. Dev Credits & Copyright -->
+        <div class="footer-dev">
+          <p>WDD231 Class Project</p>
+          <p>Victor Manuel Malpica Castro</p>
+          <p>&copy; <span id="currentyear"></span> Twilight's Chamber of Commerce</p>
+          <p id="lastModified"></p>
+        </div>
+      </footer>
     </footer>
   </body>
 </html>

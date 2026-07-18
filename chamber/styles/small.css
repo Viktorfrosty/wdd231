@@ -8,7 +8,8 @@ body {
 
 h1,
 h2,
-h3{
+h3,
+#site-name {
   font-family: 'Playfair Display', serif;
 }
 
@@ -26,6 +27,10 @@ header {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.logo-box img{
+  border-radius: 25px;
 }
 
 header h1 {
@@ -140,6 +145,26 @@ footer {
 
 footer p {
   margin: 5px 0;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.social-links a {
+  transition: transform 0.2s ease-in-out;
+}
+
+.social-links a:hover {
+  transform: scale(1.1);
+}
+
+.social-links img {
+  display: block;
+  width: 32px;
+  height: 32px;
 }
 
 /* Hide images in List View */
