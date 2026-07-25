@@ -29,7 +29,7 @@ header {
   gap: 10px;
 }
 
-.logo-box img{
+.logo-box img {
   border-radius: 25px;
 }
 
@@ -149,8 +149,7 @@ h2 {
 }
 
 .event-list,
-#weather-list,
-#spotlight-list {
+#weather-list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -158,23 +157,46 @@ h2 {
   gap: 0.75rem;
 }
 
-.event-list h3,
-.member h3 {
+.event-list h3 {
   margin: 0 0 0.25rem;
 }
 
-.member {
+/* ----- SPOTLIGHT (Mobile Centered & Equal Size) ----- */
+#spotlight-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+}
+
+.spotlight-card .member,
+#spotlight-list .member {
+  width: 100%;
+  max-width: 340px;
   background: white;
   border: 1px solid #e0e0e0;
   border-radius: 10px;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
 }
 
-.member img {
+.spotlight-card .member img,
+#spotlight-list .member img {
   width: 100px;
-  height: auto;
+  height: 100px;
   object-fit: contain;
-  margin-bottom: 0.5rem;
+  margin: 0 auto 0.5rem;
+}
+
+.spotlight-card .member h3,
+#spotlight-list .member h3 {
+  margin: 0 0 0.25rem;
 }
 
 .member-card {
@@ -275,4 +297,172 @@ footer p {
 /* Hide images in List View */
 #directory-container.list-view section img {
   display: none;
+}
+
+@media (min-width: 600px) {
+
+  /* ----- HEADER (Desktop) ----- */
+  header {
+    flex-wrap: nowrap;
+    padding: 15px 3rem;
+  }
+
+  #menu-btn {
+    display: none;
+    /* Hide hamburger on desktop */
+  }
+
+  nav {
+    width: auto;
+  }
+
+  #primary-nav {
+    display: flex;
+    /* Show nav on desktop */
+    flex-direction: row;
+    margin: 0;
+    gap: 20px;
+  }
+
+  #primary-nav li a {
+    border-top: none;
+    padding: 5px 10px;
+  }
+
+  #primary-nav li a:hover,
+  #primary-nav li a.active {
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  /* ----- HOME PAGE LAYOUT (Desktop) ----- */
+  .hero-card {
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+  }
+
+  .home-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .spotlight-card {
+    grid-column: 1 / -1;
+  }
+
+  /* ----- DIRECTORY LAYOUTS (Desktop) ----- */
+
+  #directory-container.grid-view {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  #directory-container.list-view {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #directory-container.list-view section {
+    display: grid;
+    grid-template-columns: 150px 2fr 1fr 1fr 1fr;
+    align-items: center;
+    text-align: left;
+    padding: 10px 20px;
+  }
+
+  #directory-container.list-view section img {
+    margin: 0;
+  }
+
+  /* ----- FOOTER (Desktop) ----- */
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 2rem 5rem;
+  }
+
+  .footer-dev {
+    text-align: right;
+  }
+
+}
+
+/* Spotlight: side-by-side cards, equal height & centered on wider screens */
+@media (min-width: 600px) {
+
+  .spotlight-card #spotlight-list,
+  #spotlight-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    align-items: stretch;
+    /* Ensures all cards match height */
+    justify-items: center;
+  }
+
+  .spotlight-card .member,
+  #spotlight-list .member {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.25rem;
+    box-sizing: border-box;
+    background: #ffffff;
+    border-radius: 8px;
+    justify-content: space-between;
+  }
+
+  .spotlight-card .member img,
+  #spotlight-list .member img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    flex: 0 0 100px;
+    margin: 0 auto 0.75rem;
+  }
+
+  /* Ensure content flows nicely and wraps properly */
+  .spotlight-card .member>*:not(img),
+  #spotlight-list .member>*:not(img) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    align-items: center;
+  }
+
+  .spotlight-card .member h3,
+  #spotlight-list .member h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.2;
+  }
+
+  .spotlight-card .member h4,
+  #spotlight-list .member h4,
+  .spotlight-card .member p,
+  #spotlight-list .member p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  /* Make member-card list items wrap cleanly */
+  .member-card li.info {
+    margin: 0;
+    padding: 0;
+    line-height: 1.25;
+  }
+
+  /* Prevent long links or numbers from overflowing */
+  #spotlight-list a,
+  #spotlight-list p {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
 }
