@@ -92,6 +92,111 @@ h2 {
   font-size: 2rem;
 }
 
+.home-page {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.hero-card,
+.info-card {
+  background: #f7f7f7;
+  border: 1px solid #d8d8d8;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+.hero-card {
+  display: grid;
+  gap: 1rem;
+}
+
+.eyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #285e5b;
+  margin: 0 0 0.25rem;
+}
+
+.hero-copy h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background: #285e5b;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 999px;
+}
+
+.hero-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.home-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.event-list,
+#weather-list,
+#spotlight-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.event-list h3,
+.member h3 {
+  margin: 0 0 0.25rem;
+}
+
+.member {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.member img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.member-card {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.prediction {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.weather-location {
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
 .view-toggles {
   text-align: center;
   margin-bottom: 2rem;

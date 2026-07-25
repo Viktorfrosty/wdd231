@@ -1,18 +1,14 @@
 const baseURL = "https://viktorfrosty.github.io/wdd231/chamber/";
-
 const linksURL = "https://viktorfrosty.github.io/wdd231/chamber/data/members.json";
-
 const spotlight = document.querySelector("#spotlight-list");
 
 async function getMembers() {
-    
+    if (!spotlight) return;
+
     let urlData = await fetch(linksURL);
-
     let spotlightData = await urlData.json();
-
     populateSpotlight(spotlightData.members);
-
-};
+}
 
 function populateSpotlight(members) {
 

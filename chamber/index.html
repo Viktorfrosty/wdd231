@@ -3,27 +3,24 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Twilight's Chamber of Commerce - Home Page</title>
-    <meta name="description"
-      content="Discover and connect with local businesses in the Twilight's Chamber of Commerce Directory.">
+    <title>Twilight's Chamber of Commerce - Home</title>
+    <meta name="description" content="Welcome to the Twilight's Chamber of Commerce home page, connecting local businesses and community members in Barquisimeto.">
     <meta name="author" content="Victor Manuel Malpica Castro">
-    <!-- Open Graph Meta Tags for Facebook/Social Media -->
-    <meta property="og:title" content="Twilight's Chamber of Commerce Directory">
+    <meta property="og:title" content="Twilight's Chamber of Commerce Home">
     <meta property="og:description" content="Connecting businesses and community in Barquisimeto.">
     <meta property="og:image" content="https://viktorfrosty.github.io/wdd231/chamber/images/barquisimeto-11688.jpg">
-    <meta property="og:url" content="https://viktorfrosty.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://viktorfrosty.github.io/wdd231/chamber/index.html">
     <meta property="og:type" content="website">
     <link rel="icon" href="images/logo.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css" media="all">
     <link rel="stylesheet" href="styles/large.css" media="(min-width: 600px)">
     <script src="scripts/base.js" defer></script>
     <script src="scripts/forecast.js" defer></script>
+    <script src="scripts/spotlight.js" defer></script>
   </head>
   <body>
     <header>
@@ -31,19 +28,63 @@
         <img src="images/logo.webp" alt="Chamber Logo" width="50" height="50">
         <span id="site-name">Twilight's Chamber of Commerce</span>
       </div>
-      <button id="menu-btn">☰</button>
+      <button id="menu-btn" aria-label="Open menu">☰</button>
       <nav>
         <ul id="primary-nav">
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="directory.html">Directory</a></li>
-          <li><a href="#">Join</a></li>
-          <li><a href="#">Discover</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="discover.html">Discover</a></li>
         </ul>
       </nav>
     </header>
-    <main>
 
+    <main class="home-page">
+      <section class="hero-card">
+        <div class="hero-copy">
+          <p class="eyebrow">Barquisimeto Business Network</p>
+          <h1>Grow your business with the Chamber</h1>
+          <p>Join a collaborative community that supports entrepreneurs, professionals, and visitors with local opportunities and partnerships.</p>
+          <a class="cta-button" href="join.html">Join the Chamber</a>
+        </div>
+        <picture>
+          <source media="(max-width: 600px)" srcset="images/hero-small.webp">
+          <img src="images/hero-medium.webp" alt="Community and business activity in Barquisimeto" loading="eager" width="600" height="450">
+        </picture>
+      </section>
+
+      <section class="home-grid">
+        <article class="info-card">
+          <h2>Current Events</h2>
+          <ul class="event-list">
+            <li>
+              <h3>City Anniversary</h3>
+              <p>Celebrate local culture, food, and community with a festive weekend of activities.</p>
+            </li>
+            <li>
+              <h3>Agropecuarian Expo</h3>
+              <p>Explore innovations, partnerships, and opportunities across the regional agricultural sector.</p>
+            </li>
+            <li>
+              <h3>Animal Charity Gala</h3>
+              <p>Support a meaningful cause while networking with local businesses and residents.</p>
+            </li>
+          </ul>
+        </article>
+
+        <article class="info-card weather-card">
+          <h2>Weather</h2>
+          <p id="location" class="weather-location">Loading weather…</p>
+          <ul id="weather-list"></ul>
+        </article>
+
+        <article class="info-card spotlight-card">
+          <h2>Member Spotlights</h2>
+          <ul id="spotlight-list"></ul>
+        </article>
+      </section>
     </main>
+
     <footer>
       <div class="footer-info">
         <p><strong>Twilight's Chamber of Commerce</strong></p>
@@ -52,12 +93,9 @@
         <p>(+58) 000-0000000</p>
       </div>
       <div class="social-links">
-        <a href="https://facebook.com" aria-label="Facebook"><img src="images/facebook.svg" alt="Facebook" width="32"
-            height="32"></a>
-        <a href="https://instagram.com" aria-label="Twitter"><img src="images/instagram.svg" alt="Twitter" width="32"
-            height="32"></a>
-        <a href="https://linkedin.com" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="LinkedIn" width="32"
-            height="32"></a>
+        <a href="https://facebook.com" aria-label="Facebook"><img src="images/facebook.svg" alt="Facebook" width="32" height="32"></a>
+        <a href="https://instagram.com" aria-label="Twitter"><img src="images/instagram.svg" alt="Twitter" width="32" height="32"></a>
+        <a href="https://linkedin.com" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="LinkedIn" width="32" height="32"></a>
       </div>
       <div class="footer-dev">
         <p>WDD231 Class Project</p>

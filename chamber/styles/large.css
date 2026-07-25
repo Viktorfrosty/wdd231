@@ -34,6 +34,20 @@
     text-decoration: underline;
   }
 
+  /* ----- HOME PAGE LAYOUT (Desktop) ----- */
+  .hero-card {
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+  }
+
+  .home-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .spotlight-card {
+    grid-column: 1 / -1;
+  }
+
   /* ----- DIRECTORY LAYOUTS (Desktop) ----- */
 
   #directory-container.grid-view {
