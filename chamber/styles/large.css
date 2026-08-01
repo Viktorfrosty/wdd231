@@ -123,6 +123,19 @@
     margin: 0 auto 0.75rem;
   }
 
+  .join-layout {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: start;
+  }
+
+  .membership-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .membership-card {
+    min-height: 180px;
+  }
+
   /* Ensure content flows nicely and wraps properly */
   .spotlight-card .member>*:not(img),
   #spotlight-list .member>*:not(img) {

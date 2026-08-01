@@ -171,6 +171,152 @@ h2 {
   justify-items: center;
 }
 
+.join-page,
+.thank-you-page {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.join-intro,
+.thank-you-card {
+  background: #f7f7f7;
+  border: 1px solid #d8d8d8;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+.join-layout {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.membership-form fieldset {
+  border: 1px solid #c7c7c7;
+  border-radius: 10px;
+  padding: 1rem;
+  display: grid;
+  gap: 0.9rem;
+  background: #fff;
+}
+
+.membership-form legend {
+  padding: 0 0.5rem;
+  font-weight: 700;
+}
+
+.form-field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  padding: 0.7rem;
+  border: 1px solid #bdbdbd;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.submit-button,
+.modal-trigger {
+  border: none;
+  border-radius: 999px;
+  background: #285e5b;
+  color: #fff;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.membership-cards {
+  display: grid;
+  gap: 1rem;
+}
+
+.membership-card {
+  background: linear-gradient(135deg, #eef7f7, #fdfdfd);
+  border: 1px solid #d7d7d7;
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+  animation: cardFade 0.8s ease both;
+}
+
+.membership-card h2 {
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+  font-size: 1.4rem;
+}
+
+.membership-card p {
+  margin-bottom: 0.8rem;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+.modal.open {
+  display: flex;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  max-width: 420px;
+  width: 100%;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.7rem;
+  border: none;
+  background: transparent;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.summary-box {
+  background: #fff;
+  border: 1px solid #d8d8d8;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.summary-box ul {
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+@keyframes cardFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .spotlight-card .member,
 #spotlight-list .member {
   width: 100%;
