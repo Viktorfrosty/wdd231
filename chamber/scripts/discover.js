@@ -9,7 +9,10 @@ if (discoverGrid) {
       <article class="discover-card card${index + 1}">
         <h2>${item.name}</h2>
         <figure>
-          <img src="${item.image}" alt="${item.alt}" width="300" height="200" loading="lazy">
+          <picture>
+            <source media="(max-width: 599px)" srcset="${item.imageSmall || item.image}">
+            <img src="${item.image}" alt="${item.alt}" width="300" height="200" loading="lazy">
+          </picture>
         </figure>
         <address>${item.address}</address>
         <p>${item.description}</p>
