@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="styles/small.css" media="all">
     <link rel="stylesheet" href="styles/large.css" media="(min-width: 600px)">
     <script src="scripts/base.js" defer></script>
+    <script type="module" src="scripts/discover.js" defer></script>
   </head>
   <body>
     <header>
@@ -37,9 +38,16 @@
       </nav>
     </header>
 
-    <main>
-      <h1>Discover the Chamber</h1>
-      <p>This page is in construction.</p>
+    <main class="discover-page">
+      <section class="discover-hero">
+        <div>
+          <p class="eyebrow">Barquisimeto highlights</p>
+          <h1>Discover what makes our community thrive</h1>
+          <p>Explore eight local landmarks and gathering places that connect residents, entrepreneurs, and visitors to the heart of the chamber’s network.</p>
+        </div>
+        <div id="visit-message" class="visit-message" aria-live="polite"></div>
+      </section>
+      <div id="discover-grid" class="discover-grid"></div>
     </main>
 
     <footer>

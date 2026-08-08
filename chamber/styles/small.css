@@ -92,6 +92,99 @@ h2 {
   font-size: 2rem;
 }
 
+.discover-page {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.discover-hero {
+  background: linear-gradient(135deg, #f7f7f7, #eef7f7);
+  border: 1px solid #d8d8d8;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  display: grid;
+  gap: 1rem;
+}
+
+.visit-message {
+  background: #ffffff;
+  border-left: 4px solid #285e5b;
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+  font-weight: 700;
+  color: #285e5b;
+}
+
+.discover-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8";
+}
+
+.discover-card {
+  background: #ffffff;
+  border: 1px solid #d8d8d8;
+  border-radius: 12px;
+  padding: 1rem;
+  display: grid;
+  gap: 0.75rem;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+}
+
+.discover-card h2 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.discover-card figure {
+  margin: 0;
+}
+
+.discover-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.discover-card address {
+  font-style: normal;
+  font-weight: 700;
+  color: #285e5b;
+}
+
+.discover-card button {
+  width: max-content;
+  border: none;
+  border-radius: 999px;
+  background: #285e5b;
+  color: #fff;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.discover-card.card1 { grid-area: card1; }
+.discover-card.card2 { grid-area: card2; }
+.discover-card.card3 { grid-area: card3; }
+.discover-card.card4 { grid-area: card4; }
+.discover-card.card5 { grid-area: card5; }
+.discover-card.card6 { grid-area: card6; }
+.discover-card.card7 { grid-area: card7; }
+.discover-card.card8 { grid-area: card8; }
+
 .home-page {
   display: grid;
   gap: 1.5rem;

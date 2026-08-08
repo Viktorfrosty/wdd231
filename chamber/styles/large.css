@@ -87,6 +87,36 @@
 
 }
 
+@media (min-width: 600px) {
+  .discover-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "card1 card2"
+      "card3 card4"
+      "card5 card6"
+      "card7 card8";
+  }
+}
+
+@media (min-width: 1025px) {
+  .discover-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-areas:
+      "card1 card2 card3"
+      "card4 card5 card6"
+      "card7 card8 card8";
+  }
+
+  .discover-card img {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .discover-card img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.16);
+  }
+}
+
 /* Spotlight: side-by-side cards, equal height & centered on wider screens */
 @media (min-width: 600px) {
 
